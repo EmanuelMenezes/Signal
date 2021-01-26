@@ -10,6 +10,6 @@ try {
     }
 catch(PDOException $e)
     {
-    echo "Erro de conexão com o Banco de Da dos: " . $e->getMessage();
+    echo "Erro de conexão com o Banco de Dados: " . $e->getMessage();
     }
 ?>
