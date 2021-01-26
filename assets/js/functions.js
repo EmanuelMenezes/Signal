@@ -2,16 +2,19 @@ $(".btnModulo").click(function() {
     var contentUrl = "";
     switch (this.id) {
         case "btnEmpreendimentos":
-            contentUrl = "empreendimentos.php"
+            contentUrl = "empreendimentos.php";
             break;
         case "btnUnidades":
-            contentUrl = "unidades.php"
+            contentUrl = "unidades.php";
             break;
         case "btnVendas":
-            contentUrl = "vendas.php"
+            contentUrl = "vendas.php";
             break;
         case "btnRelatorios":
-            contentUrl = "relatorios.php"
+            contentUrl = "relatorios.php";
+            break;
+        case "btnHome":
+            contentUrl = "home.php";
             break;
     }
 
