@@ -47,19 +47,19 @@ include("database.php");
                                 <a style="line-height: 1;" class="nav-link" href="#"><i class="bi bi-file-earmark-bar-graph"></i> Relatórios</a>
                             </li>
                         </div>
-                        <div class="btn-secondary btnModulo" id="btnRelatorios">
+                        <div class="btn-secondary btnModulo" id="btnClientes">
                             <li class="nav-item">
-                                <a style="line-height: 1;" class="nav-link" href="#"><i class="bi bi-file-earmark-bar-graph"></i> Relatórios</a>
+                                <a style="line-height: 1;" class="nav-link" href="#"><i class="bi bi-people"></i> Clientes</a>
                             </li>
                         </div>
-                        <div class="btn-secondary btnModulo" id="btnRelatorios">
+                        <div class="btn-secondary btnModulo" id="btnVendedores">
                             <li class="nav-item">
-                                <a style="line-height: 1;" class="nav-link" href="#"><i class="bi bi-file-earmark-bar-graph"></i> Relatórios</a>
+                                <a style="line-height: 1;" class="nav-link" href="#"><i class="bi bi-person-circle"></i> Vendedores</a>
                             </li>
                         </div>
-                        <div class="btn-secondary btnModulo" id="btnRelatorios">
+                        <div class="btn-secondary btnModulo" id="btnResponsaveis">
                             <li class="nav-item">
-                                <a style="line-height: 1;" class="nav-link" href="#"><i class="bi bi-file-earmark-bar-graph"></i> Relatórios</a>
+                                <a style="line-height: 1;" class="nav-link" href="#"><i class="bi bi-person-badge"></i> Responsáveis Técnicos</a>
                             </li>
                         </div>
                     </ul>
@@ -71,7 +71,7 @@ include("database.php");
             <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-            <script src="./assets/js/functions.js"></script>
+            <script src="./assets/js/btnClick.js"></script>
         </footer>
     </body>
 
