@@ -157,9 +157,10 @@ include("database.php");
                 <th>#</th>
             </tr>
             <?php 
-$get_datas = $conn->prepare("SELECT responsavel_tecnico.nome_responsavel, cep, endereco, numero, estado, bairro, cidade, valor_total_obra, data_inicio, data_fim, empreendimentos.nome FROM empreendimentos LEFT JOIN responsavel_tecnico ON responsavel_tecnico.id_responsavel = empreendimentos.fk_responsavel");
+$get_datas = $conn->prepare("SELECT responsavel_tecnico.nome_responsavel, cep, endereco, numero, estado, bairro, cidade, valor_total_obra, data_inicio, data_fim, empreendimentos.nome, empreendimento FROM empreendimentos LEFT JOIN responsavel_tecnico ON responsavel_tecnico.id_responsavel = empreendimentos.fk_responsavel");
 $get_datas->execute();
 while($res=$get_datas->fetch(PDO::FETCH_ASSOC)){
+    
             ?>
             <tr>
                 <td style="font-size:12px"><?php echo $res['nome']; ?></td>
@@ -169,11 +170,11 @@ while($res=$get_datas->fetch(PDO::FETCH_ASSOC)){
                 <td style="font-size:12px"><?php echo $res['estado']; ?></td>
                 <td style="font-size:12px"><?php echo $res['bairro']; ?></td>
                 <td style="font-size:12px"><?php echo $res['cidade']; ?></td>
-                <td style="font-size:12px"><?php echo $res['valor_total_obra']; ?></td>
+                <td style="font-size:12px">R$<?php echo $res['valor_total_obra']; ?></td>
                 <td style="font-size:12px"><?php echo $res['data_inicio']; ?></td>
                 <td style="font-size:12px"><?php echo $res['data_fim']; ?></td>
                 <td style="font-size:12px"><?php echo $res['nome_responsavel']; ?></td>
-                <td style="font-size:12px"><?php echo '<button style=" font-size:8px;line-heigth:1;" class="btn btn-primary" href="#">Editar</button><button style=" font-size:8px;line-heigth:1;" class="btn btn-danger" href="#">Deletar</button>'?></td>
+                <td style="font-size:12px"><?php echo '<button style=" font-size:8px;line-heigth:1;" class="btn btn-primary" href="javascript" onclick="editEmpreendimentos('.$res['empreendimento'].');">Editar</button><button style=" font-size:8px;line-heigth:1;" class="btn btn-danger" href="javascript:" onclick="deleteEmpreendimentos('.$res['empreendimento'].')">Deletar</button>'?></td>
             </tr>
             <?php } ?>
         </table>
