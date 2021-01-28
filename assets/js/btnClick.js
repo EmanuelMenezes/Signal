@@ -1,5 +1,5 @@
 function abreModulo(modulo) {
-    var contentUrl = modulo + ".php";
+    var contentUrl = "../" + modulo + ".php";
 
     $.ajax({
         url: contentUrl,
