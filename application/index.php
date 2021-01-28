@@ -1,5 +1,5 @@
 <?php
-include('../database.php');
+include('database.php');
 
 ?>
 <!doctype html>
@@ -16,26 +16,9 @@ include('../database.php');
         <!-- Bootstrap core CSS -->
         <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        </style>
-
-
         <!-- Custom styles for this template -->
         <link href="dashboard.css" rel="stylesheet">
+        <link href="../assets/css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -45,41 +28,39 @@ include('../database.php');
             <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
-                    <a class="nav-link" onclick="abreModulo('')">Sair</a>
+                    <a class="nav-link" href="javascript:" onclick="abreModulo('')">Início</a>
                 </li>
             </ul>
         </header>
-
         <div class="container-fluid">
             <div class="row">
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" onclick="abreModulo('empreendimentos')">
+                                <a class="nav-link" href="javascript:" onclick="abreModulo('empreendimentos')">
                                     <span data-feather="layers"></span> Empreendimentos
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" onclick="abreModulo('unidades')">
+                                <a class="nav-link" href="javascript:" onclick="abreModulo('unidades')">
                                     <span data-feather="home"></span> Unidades
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" onclick="abreModulo('vendas')">
+                                <a class="nav-link" href="javascript:" onclick="abreModulo('vendas')">
                                     <span data-feather="shopping-cart"></span> Vendas
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" onclick="abreModulo('responsaveis')">
-                                    <span data-feather="users"></span> Responsáveis Técnicos
+                                <a class="nav-link" href="javascript:" onclick="abreModulo('responsaveis')">
+                                    <span data-feather="users"></span> Pessoas
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" onclick="abreModulo('relatorios')">
+                                <a class="nav-link" href="javascript:" onclick="abreModulo('relatorios')">
                                     <span data-feather="bar-chart-2"></span> Relatórios <span data-feather="plus-circle"></span>
                                 </a>
 
@@ -90,57 +71,8 @@ include('../database.php');
                 </nav>
 
                 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" id="main-content">
-                <?php include "../home.php" ?>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1 class="h2">Início</h1>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <div class="btn-group me-2">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                            </div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                                <span data-feather="calendar"></span>
-                                This week
-                            </button>
-                        </div>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-sm" id="tableEmpreendimentos">
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>CEP</th>
-                                    <th>Endereço</th>
-                                    <th>Número</th>
-                                    <th>Estado</th>
-                                    <th>Bairro</th>
-                                    <th>Cidade</th>
-                                    <th>Valor Total</th>
-                                    <th>Data de Início</th>
-                                    <th>Data do Fim</th>
-                                    <th>Responsável Técnico</th>
-                                    <th>#</th>
-                                </tr>
-                                <?php 
-                                    $get_datas = $conn->prepare("SELECT * FROM empreendimentos");
-                                    $get_datas->execute();
-                                    while($res=$get_datas->fetch(PDO::FETCH_ASSOC)){
-                                    ?>
-                                <tr>
-                                    <td style="font-size:12px"><?php echo $res['nome']; ?></td>
-                                    <td style="font-size:12px"><?php echo $res['cep']; ?></td>
-                                    <td style="font-size:12px"><?php echo $res['endereco']; ?></td>
-                                    <td style="font-size:12px"><?php echo $res['numero']; ?></td>
-                                    <td style="font-size:12px"><?php echo $res['estado']; ?></td>
-                                    <td style="font-size:12px"><?php echo $res['bairro']; ?></td>
-                                    <td style="font-size:12px"><?php echo $res['cidade']; ?></td>
-                                    <td style="font-size:12px"><?php echo $res['valor_total_obra']; ?></td>
-                                    <td style="font-size:12px"><?php echo $res['data_inicio']; ?></td>
-                                    <td style="font-size:12px"><?php echo $res['data_fim']; ?></td>
-                                    <td style="font-size:12px"><?php echo $res['fk_responsavel']; ?></td>
-                                    <td style="font-size:12px"><?php echo '<button style=" font-size:8px;line-heigth:1;" class="btn btn-primary" href="#">Editar</button><button style=" font-size:8px;line-heigth:1;" class="btn btn-danger" href="#">Deletar</button>'?></td>
-                                </tr>
-                                <?php } ?>
-                            </table>
                     </div>
                 </main>
             </div>
