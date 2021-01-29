@@ -78,9 +78,9 @@ function deleteVendedor(idVendedor) {
 
 }
 
-function editClientes(idClientes) {
+function editCliente(idClientes) {
     $.ajax({
-        url: "editClientes.php",
+        url: "editCliente.php",
         data: { id: idClientes },
         success: function(result) {
             $("#main-content").html(result);
@@ -89,9 +89,9 @@ function editClientes(idClientes) {
     });
 }
 
-function deleteClientes(idClientes) {
+function deleteCliente(idClientes) {
     $.ajax({
-        url: "deleteClientes.php",
+        url: "deleteCliente.php",
         data: { id: idClientes },
         success: function(result) {
             $("#main-content").html(result);
