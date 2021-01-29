@@ -6,7 +6,7 @@ $idResponsavel = $_GET['id'];
     $crea = $_POST['inputCREA'];
 
 
-    $insert_query = $conn->prepare("UPDATE responsavel_tecnico set nome_responsavel = ? , rg = ? , crea = ? WHERE id_responsavel = ?)");
+    $insert_query = $conn->prepare("UPDATE responsavel_tecnico set nome_responsavel = ? , rg = ? , crea = ? WHERE id_responsavel = ?");
 
     $insert_query->execute(array($nome, $rg, $crea, $idResponsavel));
     header('Location: index.php?go=responsaveis');

@@ -54,3 +54,95 @@ function deleteResponsavel(idResponsavel) {
     });
 
 }
+
+function editVendedor(idVendedor) {
+    $.ajax({
+        url: "editVendedor.php",
+        data: { id: idVendedor },
+        success: function(result) {
+            $("#main-content").html(result);
+
+        }
+    });
+}
+
+function deleteVendedor(idVendedor) {
+    $.ajax({
+        url: "deleteVendedor.php",
+        data: { id: idVendedor },
+        success: function(result) {
+            $("#main-content").html(result);
+            abreModulo('vendedores');
+        }
+    });
+
+}
+
+function editClientes(idClientes) {
+    $.ajax({
+        url: "editClientes.php",
+        data: { id: idClientes },
+        success: function(result) {
+            $("#main-content").html(result);
+
+        }
+    });
+}
+
+function deleteClientes(idClientes) {
+    $.ajax({
+        url: "deleteClientes.php",
+        data: { id: idClientes },
+        success: function(result) {
+            $("#main-content").html(result);
+            abreModulo('Clientes');
+        }
+    });
+
+}
+
+function editUnidades(idUnidades) {
+    $.ajax({
+        url: "editUnidades.php",
+        data: { id: idUnidades },
+        success: function(result) {
+            $("#main-content").html(result);
+
+        }
+    });
+}
+
+function deleteUnidades(idUnidades) {
+    $.ajax({
+        url: "deleteUnidades.php",
+        data: { id: idUnidades },
+        success: function(result) {
+            $("#main-content").html(result);
+            abreModulo('Unidades');
+        }
+    });
+
+}
+
+function editVendas(idVendas) {
+    $.ajax({
+        url: "editVendas.php",
+        data: { id: idVendas },
+        success: function(result) {
+            $("#main-content").html(result);
+
+        }
+    });
+}
+
+function deleteVendas(idVendas) {
+    $.ajax({
+        url: "deleteVendas.php",
+        data: { id: idVendas },
+        success: function(result) {
+            $("#main-content").html(result);
+            abreModulo('Vendas');
+        }
+    });
+
+}

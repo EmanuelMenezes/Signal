@@ -23,7 +23,7 @@ $res=$get_datas->fetch(PDO::FETCH_ASSOC);
             </div>
         </div>
     </div>
-    <form method="POST" action="updateResponsaveis.php" class="row g-3">
+    <form method="POST" action="updateResponsaveis.php?id=<?=$idResponsavel?>" class="row g-3">
         <div class="col-md-6">
             <label for="inputNome" class="form-label">Nome</label>
             <input type="text" class="form-control" name="inputNome" value="<?=$res['nome_responsavel']?>" required>
