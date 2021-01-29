@@ -8,16 +8,7 @@ include("database.php");
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
                 <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalUnidades">Nova Venda</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Buscar</button>
             </div>
-            <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Compartilhar</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Exportar</button>
-            </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-            </button>
         </div>
     </div>
 
@@ -27,7 +18,7 @@ include("database.php");
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Cadastro de Empreendimentos</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Nova Venda</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

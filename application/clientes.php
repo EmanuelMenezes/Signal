@@ -55,12 +55,6 @@ include("database.php");
     </div>
 
 
-    <div id="pesquisa" class="row row-cols-lg-auto g-3 align-items-center" style="margin-bottom:15px;">
-        <div class="col-md-7">
-            <label for="SearchForm" class="form-label">Pesquisa</label>
-            <input type="text" class="form-control" id="SearchForm">
-        </div>
-    </div>
     <div class="table-responsive">
         <table class="table table-striped table-sm" id="tableCliente">
             <tr>

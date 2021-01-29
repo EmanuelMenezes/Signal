@@ -9,9 +9,6 @@ include("database.php");
             <div class="btn-group me-2">
                 <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastrar</button>
             </div>
-            <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Exportar</button>
-            </div>
         </div>
     </div>
 
@@ -120,24 +117,6 @@ include("database.php");
                 </div>
 
             </div>
-        </div>
-    </div>
-
-
-    <div id="pesquisa" class="row row-cols-lg-auto g-3 align-items-center" style="margin-bottom:15px;">
-        <div class="col-md-3">
-            <label for="inputState" class="form-label">Filtrar Por</label>
-            <select id="inputState" class="form-select">
-                <option value="nome">Nome</option>
-                <option value="cep">CEP</option>
-                <option value="cidade">Cidade</option>
-                <option value="estado">Estado</option>
-                <option value="nome_responsavel">Resp. Técnico</option>
-            </select>
-        </div>
-        <div class="col-md-7">
-            <label for="SearchForm" class="form-label">Pesquisa</label>
-            <input type="text" class="form-control" id="SearchForm">
         </div>
     </div>
     <div class="table-responsive">
