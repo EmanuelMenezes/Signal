@@ -104,7 +104,7 @@ include("database.php");
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Valor da Obra R$</span>
-                            <input type="text" class="form-control " name="inputValor">
+                            <input type="number" class="form-control " name="inputValor">
                         </div>
                         <div class="col-12">
                         </div>
