@@ -14,9 +14,6 @@ include("database.php");
                 <button type="button" class="btn btn-sm btn-outline-secondary" href="javascript:" onclick="abreModulo('clientes');">Clientes</button>
                 <button type="button" class="btn btn-sm btn-outline-secondary" href="javascript:" onclick="abreModulo('vendedores');">Vendedores</button>
             </div>
-            <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Exportar</button>
-            </div>
         </div>
     </div>
 
