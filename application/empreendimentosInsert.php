@@ -15,5 +15,5 @@ include("database.php");
     $insert_query = $conn->prepare("INSERT INTO empreendimentos (nome , fk_responsavel , endereco, bairro, cidade, estado, numero, cep, data_inicio, data_fim, valor_total_obra) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     $insert_query->execute(array($nome, $responsavel, $endereco, $bairro, $inputCity, $inputState, $numero, $inputZip, $inputDtInicio, $inputDtFim, $inputValor));
-    
+    header('Location: index.php?go=empreendimentos');
 ?>

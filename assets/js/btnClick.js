@@ -32,10 +32,10 @@ function deleteEmpreendimentos(idEmpreendimento) {
 
 }
 
-function editResponsavel(idEmpreendimento) {
+function editResponsavel(idResponsavel) {
     $.ajax({
-        url: "editEmpreendimentos.php",
-        data: { id: idEmpreendimento },
+        url: "editResponsaveis.php",
+        data: { id: idResponsavel },
         success: function(result) {
             $("#main-content").html(result);
 
@@ -43,10 +43,10 @@ function editResponsavel(idEmpreendimento) {
     });
 }
 
-function deleteResponsavel(idEmpreendimento) {
+function deleteResponsavel(idResponsavel) {
     $.ajax({
-        url: "deleteEmpreendimentos.php",
-        data: { id: idEmpreendimento },
+        url: "deleteResponsaveis.php",
+        data: { id: idResponsavel },
         success: function(result) {
             $("#main-content").html(result);
             abreModulo('responsaveis');

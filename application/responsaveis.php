@@ -86,5 +86,4 @@ while($res=$get_datas->fetch(PDO::FETCH_ASSOC)){
             </tr>
             <?php } ?>
         </table>
-
 </html>

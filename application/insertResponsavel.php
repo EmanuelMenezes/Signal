@@ -8,5 +8,5 @@ include("database.php");
     $insert_query = $conn->prepare("INSERT INTO responsavel_tecnico (nome_responsavel , rg , crea) VALUES (?, ?, ?)");
 
     $insert_query->execute(array($nome, $rg, $crea));
-    
+    header('Location: index.php?go=responsaveis');
 ?>
