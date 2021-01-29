@@ -7,8 +7,9 @@ Para utilizar o sistema:
 1) Verificar se as propriedades de PDO e Mysql estão habilitadas no arquivo php.ini;
 2) Conexão com a internet, pois existem arquivos linkados por CDN;
 3) Realizar a criação do banco de dados por meio do sql disponibilizado na pasta db;
+4) Verificar no arquivo "database.php" se as informações de conexão com o banco de dados estão corretas;
 
-. O arquivo index se encontra dentro de 'application', portanto a url inicial deve ser algo parecido com:
+. O arquivo "index" se encontra dentro de 'application', portanto a url inicial deve ser algo parecido com:
  "localhost/Signal/application/";
 
 
